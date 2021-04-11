@@ -15,7 +15,7 @@ export default class ExercisesList extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://localhost:5000/exercises/`)
+      .get(`https://personal-mongo.herokuapp.com/exercises/`)
       .then((response) => {
         this.setState({ exercises: response.data });
         console.log("Data fetched and stored in state.");
@@ -27,7 +27,7 @@ export default class ExercisesList extends Component {
 
   deleteExercise(id) {
     axios
-      .delete("http://localhost:5000/exercises/" + id)
+      .delete("https://personal-mongo.herokuapp.com/exercises/" + id)
       .then((res) => console.log(res.data));
     this.setState({
       exercises: this.state.exercises.filter((el) => el._id !== id),
