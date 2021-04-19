@@ -87,7 +87,6 @@ export default class CreateExercises extends Component {
                 useref='userInput'
                 required
                 className='form-control'
-                value={this.state.username}
                 onChange={this.onChangeUsername}
               >
                 {this.state.users.map(function (user) {
