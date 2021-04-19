@@ -84,7 +84,6 @@ export default class CreateExercises extends Component {
             <div className='input-label-field'>
               <label>Username: </label>
               <select
-                useref='userInput'
                 required
                 className='form-control'
                 onChange={this.onChangeUsername}
